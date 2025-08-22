@@ -1,0 +1,86 @@
+.commentReplyContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.commentReplyProfilePicture{
+    width: 33px;
+    height: 33px;
+    border-radius: 100px;
+    border: 2px solid var(--shadow-medium);
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.commentReplyUserName{
+    color: var(--text);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.commentReplyUserName:hover{
+    text-decoration: underline;
+}
+
+.commentReplyTime{
+    font-size: 14px;
+    color: var(--shadow-medium);
+}
+
+.commentReplyContent{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.commentReplyContentHTMLContainer{
+    margin-top: 1px;
+    word-wrap: break-word;
+}
+
+.commentReplyContentHTML p {
+    margin: 0px;
+}
+
+.commentReplyContentHTML p span {
+    color: var(--text) !important;
+    background-color: transparent !important;
+}
+
+.commentReplyContentHTML a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.commentReplyContentHTML a:hover {
+    text-decoration: underline;
+}
+
+.commentReplyAction{
+    color: var(--shadow-medium);
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 2px;
+}
+
+.commentReplyActionLiked{
+    color: var(--blue);
+}
+
+.commentReplyActionLiked,
+.commentReplyActionLike,
+.commentReplyActionReply,
+.commentReplyActionLoadReply{
+    cursor: pointer;
+}
+
+.commentReplyActionLiked:hover,
+.commentReplyActionLike:hover,
+.commentReplyActionReply:hover,
+.commentReplyActionLoadReply:hover{
+    text-decoration: underline;
+}

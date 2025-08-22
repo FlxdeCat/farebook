@@ -1,0 +1,37 @@
+enum GroupMemberStatus{
+    Admin
+    Member
+    Request
+    Invite
+    None
+}
+
+type GroupMember {
+    groupID: ID!
+    group: Group! @goField(forceResolver: true)
+    userID: ID!
+    user: User! @goField(forceResolver: true)
+    status: GroupMemberStatus!
+}
+
+input NewGroupMember {
+    groupID: String!
+    userID: String!
+    status: GroupMemberStatus!
+}
+
+extend type Query {
+    getGroupMember(groupID: String!, userJWT: String!): GroupMember!
+    getAllGroupMember(groupID: String!): [GroupMember!]!
+    getAllGroupMemberCount(groupID: String!): Int!
+    getAllGroupMemberRequest(groupID: String!): [GroupMember!]!
+    getAllGroupInvitation(userJWT: String!): [GroupMember!]!
+    getAllJoinedGroup(userJWT: String!): [GroupMember!]!
+}
+
+extend type Mutation {
+    createGroupMember(newGroupMember: NewGroupMember!): GroupMember!
+    editGroupMember(newGroupMember: NewGroupMember!): GroupMember!
+    deleteGroupMember(newGroupMember: NewGroupMember!): Boolean!
+    adminLeaveGroup(newGroupMember: NewGroupMember!): Boolean!
+}

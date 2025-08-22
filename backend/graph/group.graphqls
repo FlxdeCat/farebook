@@ -1,0 +1,27 @@
+enum GroupPrivacy{
+    Public
+    Private
+}
+
+type Group {
+    id: ID!
+    name: String!
+    privacy: GroupPrivacy!
+}
+
+input NewGroup {
+    name: String!
+    privacy: GroupPrivacy!
+}
+
+extend type Query {
+    getGroupOnID(id: String!): Group!
+    getAllPublicGroup: [Group!]!
+    getAllSearchPublicGroup(search: String!): [Group!]!
+}
+
+extend type Mutation {
+    createGroup(newGroup: NewGroup!): Group!
+    editGroup(id: String!, group: NewGroup!): Group!
+    deleteGroup(id: String!): Group!
+}

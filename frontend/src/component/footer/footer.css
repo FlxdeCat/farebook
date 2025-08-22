@@ -1,0 +1,22 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);   
+}
+
+.link{
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.link:hover{
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: underline;
+}

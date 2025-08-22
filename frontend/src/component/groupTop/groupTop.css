@@ -1,0 +1,117 @@
+.groupTop{
+    margin-bottom: 15px;
+}
+
+.groupBannerChooser{
+    display: none;
+}
+
+.groupBannerWrapper:hover .groupBannerOverlay {
+    opacity: 1;
+}
+
+.groupBanner {
+    width: 1000px;
+    height: 400px;
+    border-radius: 0px 0px 20px 20px;
+    object-fit: cover;
+}
+
+.groupBannerWrapper {
+    height: 96%;
+    border-radius: 0px 0px 20px 20px;
+    position: relative;
+}
+
+.groupBannerOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0px 0px 20px 20px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.groupContent {
+    display: flex;
+    margin: 10px 40px 0px 40px;
+    justify-content: space-between;
+    place-items: center;
+    position: relative;
+}
+
+.groupContentLeft {
+    display: flex;
+    place-items: center;
+    gap: 20px;
+}
+
+.groupDetailContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.groupDetail {
+    color: var(--shadow-medium);
+    font-weight: bold;
+}
+
+.groupName {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.groupContentRight {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.groupButton {
+    display: flex;
+    gap: 10px;
+}
+
+.blueBtn {
+    padding: 10px 20px;
+    background-color: #1778f2;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.blueBtn:hover {
+    background-color: #0064de;
+}
+
+.grayOffBtn {
+    padding: 10px 20px;
+    background-color: var(--shadow-light);
+    color: var(--shadow-medium);
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+
+.redBtn{
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.redBtn:hover{
+    background-color: rgb(210, 0, 0);
+}

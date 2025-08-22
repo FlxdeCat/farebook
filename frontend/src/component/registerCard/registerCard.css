@@ -1,0 +1,84 @@
+.registerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.logo {
+    color: #1778F2;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.card {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    margin-top: 5px;
+}
+
+.titleTxt {
+    margin-bottom: 5px;
+}
+
+.field {
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px 1px;
+}
+
+.loginBtn {
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #1778F2;
+}
+
+.loginBtn:active {
+    background-color: #0064de;
+}
+
+.loginTxt {
+    cursor: pointer;
+    color: #1778F2;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.loginTxt:hover {
+    text-decoration: underline;
+}
+
+.loginTxt:active {
+    color: #0064de;
+}
+
+.nameFields{
+    display: flex;
+    gap: 8px;
+}
+
+.genderFields{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: -5px;
+}
+
+.dobTxt, .genderTxt{
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+}

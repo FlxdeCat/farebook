@@ -1,0 +1,101 @@
+.postCardSkeletonContainer{
+    background-color: var(--foreground);
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px var(--shadow-light);
+    width: 555px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.postCardSkeletonTop{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    place-items: center;
+}
+
+.postCardSkeletonTopProfile{
+    background-color: var(--shadow-light);
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+}
+
+.postCardSkeletonTopDetail{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.postCardSkeletonTopName{
+    background-color: var(--shadow-light);
+    height: 15px;
+    width: 150px;
+    border-radius: 8px;
+}
+
+.postCardSkeletonTopTime{
+    background-color: var(--shadow-light);
+    height: 13px;
+    width: 100px;
+    border-radius: 8px;
+}
+
+.postCardSkeletonContent{
+    background-color: var(--shadow-light);
+    height: 200px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.postCardSkeletonAction{
+    background-color: var(--shadow-light);
+    height: 30px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.postCardSkeletonWriteComment{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    place-items: center;
+}
+
+.postCardSkeletonWriteCommentProfile{
+    background-color: var(--shadow-light);
+    height: 35px;
+    width: 35px;
+    padding: 0px 2.5px;
+    border-radius: 100px;
+}
+
+.postCardSkeletonWriteCommentBtn{
+    background-color: var(--shadow-light);
+    height: 30px;
+    width: 100%;
+    border-radius: 100px;
+    padding: 5px 13px;
+}
+
+@keyframes skeletonAnimation {
+    0% {
+        background-color: var(--shadow-light);
+    }
+    100% {
+        background-color: var(--shadow-light-active);
+    }
+}
+
+.postCardSkeletonTopProfile,
+.postCardSkeletonTopName,
+.postCardSkeletonTopTime,
+.postCardSkeletonContent,
+.postCardSkeletonAction,
+.postCardSkeletonWriteCommentProfile,
+.postCardSkeletonWriteCommentBtn {
+    opacity: .75;
+    animation: skeletonAnimation 2s linear infinite alternate;
+}

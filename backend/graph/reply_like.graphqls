@@ -1,0 +1,21 @@
+type ReplyLike {
+    replyID: ID!
+    reply: Reply! @goField(forceResolver: true)
+    userID: ID!
+    user: User! @goField(forceResolver: true)
+}
+
+input NewReplyLike {
+    replyID: String!
+    userJWT: String!
+}
+
+extend type Query {
+    getUserLikeReply(newReplyLike: NewReplyLike!): Boolean!
+    getReplyLikes(replyID: String!): Int!
+}
+
+extend type Mutation {
+    likeReply(newReplyLike: NewReplyLike!): ReplyLike!
+    unlikeReply(newReplyLike: NewReplyLike!): Boolean!
+}

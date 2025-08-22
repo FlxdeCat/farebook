@@ -1,0 +1,142 @@
+.navbar {
+    top: 0;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    place-items: center;
+    background-color: var(--foreground);
+    box-shadow: 0px 0px 5px var(--shadow-light);
+    z-index: 100;
+}
+
+.left {
+    display: flex;
+    place-items: center;
+}
+
+.searchBar {
+    display: flex;
+    place-items: center;
+    margin-left: 10px;
+}
+
+.searchIcon {
+    color: var(--shadow-medium);
+    position: absolute;
+    margin-left: 9px;
+}
+
+.searchField {
+    color: var(--text);
+    display: block;
+    padding: 7px 10px 7px 32px;
+    border-radius: 20px;
+    border: 1px solid var(--shadow-medium);
+    background-color: var(--foreground);
+}
+
+.center {
+    display: flex;
+    place-items: center;
+    gap: 150px;
+    /* Butuh responsif */
+}
+
+.right {
+    display: flex;
+    gap: 25px;
+    place-items: center;
+}
+
+.message,
+.notification {
+    color: var(--text);
+    padding: 3px;
+    border-radius: 100px;
+    background-color: var(--shadow-light);
+}
+
+.message:hover,
+.notification:hover {
+    color: #1778F2;
+}
+
+.user {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--shadow-medium);
+    border-radius: 100px;
+    object-fit: cover;
+}
+
+.userDetail {
+    right: 0;
+    margin-right: 2px;
+    display: none;
+    position: absolute;
+    background-color: var(--foreground);
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--shadow-light);
+}
+
+.userContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 13px;
+    min-width: 240px;
+}
+
+.profileLink {
+    color: var(--text);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.userBox {
+    display: flex;
+    gap: 15px;
+    padding: 5px;
+    place-items: center;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px var(--shadow-light);
+}
+
+.userDropdown:hover .userDetail {
+    display: block;
+}
+
+.userBox:hover {
+    background-color: var(--shadow-light);
+}
+
+.logoutBtn {
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    padding: 8px;
+    border: none;
+    background-color: red;
+    cursor: pointer;
+}
+
+.logoutBtn:hover {
+    background-color: rgb(210, 0, 0);
+}
+
+.themeBtn {
+    color: var(--text);
+    font-size: 15px;
+    border-radius: 8px;
+    padding: 8px;
+    border: none;
+    background-color: var(--foreground-off);
+    cursor: pointer;
+}
+
+.themeBtn:hover {
+    background-color: var(--foreground-off-active);
+}

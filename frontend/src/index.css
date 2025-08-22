@@ -1,0 +1,33 @@
+:root[data-theme="light"] {
+  --background: #f0f2f5;
+  --foreground: white;
+  --foreground-off: rgb(245, 245, 245);
+  --foreground-off-active: rgb(225, 225, 225);
+  --text: black;
+  --text-invert: white;
+
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-light-active: rgba(0, 0, 0, 0.2);
+  --shadow-medium: rgba(0, 0, 0, 0.5);
+  --shadow-medium-active: rgba(0, 0, 0, 0.6);
+  --shadow-heavy: rgba(0, 0, 0, 0.8);
+
+  --blue: blue;
+}
+
+:root[data-theme="dark"] {
+  --background: #242526;
+  --foreground: #18191a;
+  --foreground-off: rgb(70, 70, 70);
+  --foreground-off-active: rgb(50, 50, 50);
+  --text: white;
+  --text-invert: black;
+
+  --shadow-light: rgba(255, 255, 255, 0.2);
+  --shadow-light-active: rgba(255, 255, 255, 0.3);
+  --shadow-medium: rgba(255, 255, 255, 0.5);
+  --shadow-medium-active: rgba(255, 255, 255, 0.6);
+  --shadow-heavy: rgba(255, 255, 255, 0.8);
+
+  --blue: rgb(127.5, 127.5, 255);
+}

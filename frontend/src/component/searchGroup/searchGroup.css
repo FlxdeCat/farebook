@@ -1,0 +1,20 @@
+.searchGroupContainer{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.searchGroupTitle{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.searchGroupCards{
+    display: flex;
+    gap: 10px;
+}
+
+.searchGroupCardTemp{
+    color: var(--shadow-medium);
+}

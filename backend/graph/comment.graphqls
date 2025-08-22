@@ -1,0 +1,24 @@
+type Comment {
+    id: ID!
+    post: Post! @goField(forceResolver: true)
+    postID: ID!
+    commenter: User! @goField(forceResolver: true)
+    commenterID: ID!
+    content: String!
+    createdAt: Time!
+}
+
+input NewComment {
+    userJWT: String!
+    postID: String!
+    content: String!
+}
+
+extend type Query {
+    getPostComment(postID: String!): [Comment!]!
+    getPostComments(postID: String!): Int!
+}
+
+extend type Mutation {
+    createComment(newComment: NewComment!): Comment!
+}

@@ -1,0 +1,21 @@
+type PostLike {
+    postID: ID!
+    post: Post! @goField(forceResolver: true)
+    userID: ID!
+    user: User! @goField(forceResolver: true)
+}
+
+input NewPostLike {
+    postID: String!
+    userJWT: String!
+}
+
+extend type Query {
+    getUserLikePost(newPostLike: NewPostLike!): Boolean!
+    getPostLikes(postID: String!): Int!
+}
+
+extend type Mutation {
+    likePost(newPostLike: NewPostLike!): PostLike!
+    unlikePost(newPostLike: NewPostLike!): Boolean!
+}

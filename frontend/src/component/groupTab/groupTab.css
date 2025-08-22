@@ -1,0 +1,25 @@
+.groupTabContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+}
+
+.groupTab{
+    color: var(--shadow-medium);
+    font-weight: bold;
+    padding: 10px;
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 2px solid var(--shadow-medium);
+}
+
+.groupTabSelected{
+    color: var(--blue);
+    font-weight: bold;
+    padding: 10px;
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 3px solid var(--blue);
+}

@@ -1,0 +1,10 @@
+.homeGroupPage{
+    display: flex;
+    flex-direction: column;
+}
+
+.homeGroupPostContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

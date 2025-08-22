@@ -1,0 +1,72 @@
+.forgotContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.card {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    margin-top: 5px;
+}
+
+.titleTxt {
+    margin-bottom: 5px;
+}
+
+.field {
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px 1px;
+}
+
+.searchBtn {
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #1778F2;
+}
+
+.searchBtn:active {
+    background-color: #0064de;
+}
+
+.cancelBtn {
+    cursor: pointer;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.cancelBtn:active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 10px;
+    padding: 20px 0px;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}

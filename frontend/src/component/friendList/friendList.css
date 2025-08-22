@@ -1,0 +1,20 @@
+.friendListContainer{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.friendListTitle{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.friendListCards{
+    display: flex;
+    gap: 10px;
+}
+
+.friendListCardTemp{
+    color: var(--shadow-medium);
+}

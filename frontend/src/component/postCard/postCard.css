@@ -1,0 +1,264 @@
+.postCardContainer{
+    background-color: var(--foreground);
+    padding: 10px 15px 5px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px var(--shadow-light);
+    width: 555px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.postCardTop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.postCardTopLeft{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    place-items: center;
+}
+
+.postCardTopProfilePicture{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    border: 2px solid var(--shadow-medium);
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.postCardTopDetail{
+    display: flex;
+    flex-direction: column;
+}
+
+.postCardTopUserDetail{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.postCardTopUserDetailDropdown{
+    position: relative;
+}
+
+.postCardTopUserDetailName,
+.postCardTopUserDetailTag{
+    color: var(--text);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.postCardTopUserDetailName:hover,
+.postCardTopUserDetailTag:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.postCardTopUserDetailPopup{
+    top: 18px;
+    right: 0;
+    margin-right: 2px;
+    display: none;
+    position: absolute;
+    background-color: var(--foreground);
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--shadow-light);
+    z-index: 100;
+}
+
+.postCardTopUserDetailPopup:hover{
+    display: block;
+}
+
+.postCardTopUserDetailPopupContent{
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    gap: 13px;
+    padding: 13px;
+    place-items: center;
+}
+
+.postCardTopUserDetailName:hover + .postCardTopUserDetailPopup {
+    display: block;
+}
+
+.postCardTopGroupDetailPopupBanner{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border: 2px solid var(--shadow-medium);
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.postCardTopGroupDetailProfilePicture{
+    bottom: 0;
+    right: -5px;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    border: 2px solid var(--shadow-medium);
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.postCardTopUserDetailPopupProfilePicture{
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 2px solid var(--shadow-medium);
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.postCardTopUserDetailPopupContentRight{
+    display: flex;
+    flex-direction: column;
+}
+
+.postCardTopUserDetailPopupName{
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.postCardTopUserDetailPopupName:hover {
+    text-decoration: underline;
+}
+
+.postCardTopUserDetailPopupUserDetail{
+    font-size: 13px;
+    color: var(--shadow-medium);
+    font-weight: bold;
+}
+
+.postCardTopPostDetailTime{
+    font-size: 14px;
+    color: var(--shadow-medium);
+}
+
+.postCardTopRight{
+    display: flex;
+    place-items: center;
+}
+
+.postCardDeleteBtn{
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.postCardDeleteBtn:hover{
+    background-color: rgb(210, 0, 0);
+}
+
+.postCardDeleted{
+    padding: 10px 20px;
+    background-color: var(--shadow-light);
+    color: var(--shadow-medium);
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+
+.postCardContent{
+    padding: 0px 3px;
+    font-size: 20px;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.postCardContentHTML{
+    margin-bottom: 5px;
+}
+
+.postCardContent p {
+    margin: 0px;
+}
+
+.postCardContent p span {
+    color: var(--text) !important;
+    background-color: transparent !important;
+}
+
+.postCardContent a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.postCardContent a:hover {
+    text-decoration: underline;
+}
+
+.postCardAction{
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 75px;
+    border-top: 2px solid var(--shadow-light);
+    border-bottom: 2px solid var(--shadow-light);
+    place-items: center;
+}
+
+.postCardActionLike{
+    color: var(--shadow-medium);
+    display: flex;
+    place-items: center;
+    gap: 5px;
+}
+
+.postCardActionLike:hover{
+    cursor: pointer;
+}
+
+.postCardActionLiked{
+    color: var(--blue);
+    display: flex;
+    place-items: center;
+    gap: 5px;
+}
+
+.postCardActionLiked:hover{
+    cursor: pointer;
+}
+
+.postCardActionComment{
+    color: var(--shadow-medium);
+    display: flex;
+    place-items: center;
+    gap: 5px;
+}
+
+.postCardActionComment:hover{
+    cursor: pointer;
+}
+
+.postCardActionShare{
+    color: var(--shadow-medium);
+    display: flex;
+    place-items: center;
+    gap: 5px;
+}
+
+.postCardActionShare{
+    cursor: pointer;
+}

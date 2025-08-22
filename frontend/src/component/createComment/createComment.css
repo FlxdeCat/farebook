@@ -1,0 +1,32 @@
+.writeCommentContent{
+    padding: 3px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.writeCommentProfilePicture{
+    width: 33px;
+    height: 33px;
+    border-radius: 100px;
+    border: 2px solid var(--shadow-medium);
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.writeCommentBtn{
+    background-color: var(--shadow-light);
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    color: var(--shadow-medium);
+    padding: 5px 13px;
+    width: 500px; /*<--*/
+    font-size: 14px;
+    font-weight: bold;
+    text-align: start;
+}
+
+.writeCommentBtn:hover{
+    background-color: var(--shadow-light-active);
+}

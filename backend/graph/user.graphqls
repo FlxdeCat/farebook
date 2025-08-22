@@ -1,0 +1,47 @@
+scalar Time
+
+enum Gender{
+  Male
+  Female
+}
+
+type User {
+  id: ID!
+  username: String!
+  firstname: String!
+  lastname: String!
+  dob: Time!
+  gender: Gender!
+  email: String!
+  password: String!
+  activated: Boolean!
+}
+
+input NewUser {
+  username: String!
+  firstname: String!
+  lastname: String!
+  dob: Time!
+  gender: Gender!
+  email: String!
+  password: String!
+  activated: Boolean!
+}
+
+type Query {
+  validateUser(usr: String!): Boolean!
+  validateUserJWT(jwt: String!): Boolean!
+  getUserOnJWT(jwt: String!): User!
+  getUserOnID(id: String!): User!
+  getAllActivatedUser: [User!]!
+  compareUserIDWithJWT(id: String!, jwt: String!): Boolean!
+}
+
+type Mutation {
+  register(user: NewUser!): User!
+  activateUser(usr: String!): User!
+  updateUser(id: ID!, user: NewUser!): User!
+  resetPassword(usr: String!, password: String!): User!
+  login(email: String!, password: String!): String!
+  sendForgotEmail(email: String!): String!
+}

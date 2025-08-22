@@ -1,0 +1,26 @@
+type RemoveSuggestion {
+  userID: ID!
+  toID: ID!
+}
+
+type BlockNotification {
+  userID: ID!
+  toID: ID!
+}
+
+input Relation {
+  userJWT: String!
+  toID: String!
+}
+
+extend type Query {
+  getBlockUserNotification(relation: Relation!): Boolean!
+}
+
+extend type Mutation {
+  blockUserNotification(relation: Relation!): BlockNotification!
+  unblockUserNotification(relation: Relation!): BlockNotification!
+  removeUserSuggestion(relation: Relation!): RemoveSuggestion!
+
+  applyUserSuggestion(relation: Relation!): RemoveSuggestion!
+}

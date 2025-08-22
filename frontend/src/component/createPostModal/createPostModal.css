@@ -1,0 +1,286 @@
+.createPostModalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--shadow-medium);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.createPostModalContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--foreground);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.createPostModalTxt {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.createPostModalTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    place-items: center;
+    padding-right: 10px;
+}
+
+.createPostModalTopLeft {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.createPostModalTopLeftRight {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.createPostModalUserName {
+    font-weight: bold;
+}
+
+.createPostModalDropdown {
+    position: relative;
+}
+
+.createPostModalSelected {
+    padding: 1px 5px;
+    font-size: 14px;
+    color: var(--text);
+    border: 2px solid var(--shadow-light);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.createPostModalOptions {
+    font-size: 14px;
+    color: var(--text);
+    display: none;
+    position: absolute;
+    border: 1px solid var(--shadow-light);
+    background: var(--foreground-off);
+    border-radius: 8px;
+    width: 100%;
+    z-index: 200;
+    box-shadow: 0px 3px 10px var(--shadow-light-active);
+}
+
+.createPostModalOption {
+    padding: 1px 5px;
+    cursor: pointer;
+}
+
+.createPostModalOption:hover {
+    background: var(--foreground-off-active);
+    border-radius: 8px;
+}
+
+.createPostModalBtn {
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #1778F2;
+}
+
+.createPostModalBtn:enabled:hover {
+    background-color: #0064de;
+}
+
+.createPostModalBtn:disabled {
+    background-color: var(--shadow-light);
+    color: var(--shadow-light-active);
+    cursor: default;
+}
+
+.createPostModalCloseBtn {
+    cursor: pointer;
+    padding: 10px;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--shadow-light);
+}
+
+.createPostModalCloseBtn:hover {
+    background-color: var(--shadow-light-active);
+}
+
+.createPostModalPostContent {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-height: 300px;
+    overflow: auto;
+}
+
+.createPostModalInputText {
+    width: 400px;
+    /*<---*/
+    min-height: 200px;
+    /*<---*/
+    overflow: auto;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    color: var(--text);
+    background-color: var(--foreground);
+}
+
+.createPostModalInputText .public-DraftEditorPlaceholder-root {
+    color: var(--shadow-medium);
+}
+
+.rdw-hashtag-link,
+.rdw-mention-link {
+    text-decoration: underline;
+    color: var(--blue);
+}
+
+.rdw-suggestion-wrapper {
+    position: relative;
+    z-index: 100;
+}
+
+.rdw-suggestion-dropdown {
+    position: absolute;
+    display: flex;
+    gap: 1px;
+    flex-direction: column;
+    border: 1px solid var(--shadow-medium);
+    border-radius: 8px;
+    max-height: 150px;
+    width: 100px;
+    overflow: auto;
+    color: 16px;
+    z-index: 100;
+    box-shadow: 0px 1px 4px var(--shadow-light);
+    background-color: var(--foreground);
+}
+
+.rdw-suggestion-option {
+    padding: 5px;
+    font-size: 16px;
+    color: var(--text);
+    background-color: var(--shadow-light);
+    cursor: pointer;
+}
+
+.rdw-suggestion-option:hover {
+    background-color: var(--shadow-light-active);
+}
+
+.createPostModalInputFile {
+    display: none;
+}
+
+.createPostModalTopRight {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    gap: 8px;
+}
+
+.createPostModalTag{
+    position: relative;
+}
+
+.createPostModalTagBtn {
+    border: none;
+    padding: 4px 5px 1.5px 5px;
+    color: var(--text);
+    background-color: var(--shadow-light);
+    border-radius: 100px;
+    cursor: pointer;
+    margin-top: -3.5px;
+}
+
+.createPostModalTagDropdown{
+    right: 0;
+    position: absolute;
+    background-color: var(--foreground-off);
+    flex-direction: column;
+    border: 1px solid var(--shadow-light);
+    border-radius: 10px;
+    padding: 3px;
+    box-shadow: 0px 3px 10px var(--shadow-light-active);
+    overflow-y: auto;
+    color: var(--text);
+}
+
+.createPostModalTagDropdown:focus{
+    outline: none;
+}
+
+.createPostModalTagDropdownOption{
+    border-radius: 5px;
+    font-size: 16px;
+    min-width: 100px;
+}
+
+.createPostModalTagDropdownOption:hover{
+    background-color: var(--foreground-off-active);
+}
+
+.createPostModalTagBtn:hover {
+    background-color: var(--shadow-light-active);
+}
+
+.createPostModalInputFileLabel {
+    padding: 5px;
+    background-color: var(--shadow-light);
+    border-radius: 100px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.createPostModalInputFileLabel:hover {
+    background-color: var(--shadow-light-active);
+}
+
+.createPostModalFileImage,
+.createPostModalFileVideo {
+    width: 400px;
+    /*<---*/
+    height: auto;
+}
+
+.createPostModalFileContent {
+    position: relative;
+}
+
+.createPostModalFileDeleteBtn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border-radius: 100px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 6.5px 7px 3.5px 6.5px;
+    cursor: pointer;
+}
+
+.createPostModalFileDeleteBtn:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}

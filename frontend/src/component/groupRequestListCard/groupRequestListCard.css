@@ -1,0 +1,77 @@
+.groupMemberListCardContainer{
+    width: 980px;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: var(--shadow-light-active) 0px 1px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.groupMemberListCardLeft{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    place-items: center;
+}
+
+.groupMemberListCardProfilePicture{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    border: 2px solid var(--shadow-medium);
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.groupMemberListCardName{
+    color: var(--text);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.groupMemberListCardName:hover{
+    text-decoration: underline;
+}
+
+.groupMemberListCardRole{
+    color: var(--text);
+    text-decoration: none;
+}
+
+.groupMemberListCardRight{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.groupMemberListCardPromoteBtn{
+    padding: 10px 20px;
+    background-color: #1778f2;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.groupMemberListCardPromoteBtn:hover{
+    background-color: #0064de;
+}
+
+.groupMemberListCardKickBtn{
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.groupMemberListCardKickBtn:hover{
+    background-color: rgb(210, 0, 0);
+}

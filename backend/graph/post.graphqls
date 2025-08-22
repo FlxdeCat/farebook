@@ -1,0 +1,35 @@
+enum PostType {
+    Public
+    Friend
+    Private
+}
+
+type Post {
+    id: ID!
+    poster: User! @goField(forceResolver: true)
+    posterID: ID!
+    group: Group @goField(forceResolver: true)
+    groupID: ID
+    postTag: [String!]!
+    content: String!
+    type: PostType!
+    createdAt: Time!
+}
+
+input NewPost {
+    userJWT: String!
+    groupID: String
+    postTag: [String!]!
+    content: String!
+    type: PostType!
+}
+
+extend type Query {
+    getPostForUser(userJWT: String!, offset: Int!): [Post!]!
+    getUserPost(posterID: String!, userJWT: String!, offset: Int!): [Post!]!
+}
+
+extend type Mutation {
+    createPost(newPost: NewPost!): Post!
+    deletePost(postID: String!): Post!
+}

@@ -1,0 +1,36 @@
+.imageCarouselContainer{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.prevBtn{
+    left: 0;
+    height: 100%;
+    position: absolute;
+    border: none;
+    background: linear-gradient(to left, transparent, rgba(0,0,0,0.5));
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+}
+
+.prevBtn:hover{
+    background: linear-gradient(to left, transparent, rgba(0,0,0,0.5) 80%);
+    color: rgba(255,255,255,0.8);
+}
+.nextBtn{
+    right: 0;
+    height: 100%;
+    position: absolute;
+    border: none;
+    background: linear-gradient(to right, transparent, rgba(0,0,0,0.5));
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+}
+
+.nextBtn:hover{
+    background: linear-gradient(to right, transparent, rgba(0,0,0,0.5) 80%);
+    color: rgba(255,255,255,0.8);
+}

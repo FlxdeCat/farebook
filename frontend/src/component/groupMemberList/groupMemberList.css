@@ -1,0 +1,10 @@
+.groupMemberListContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.groupMemberListTemp{
+    margin-top: 20px;
+    color: var(--shadow-medium);
+}

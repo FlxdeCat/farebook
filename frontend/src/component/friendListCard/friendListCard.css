@@ -1,0 +1,37 @@
+.friendListCardContainer{
+    border: 2px solid var(--shadow-light);
+    border-radius: 10px;
+    box-shadow: 0px 2px 3px var(--shadow-light);
+}
+
+.friendListCardProfile{
+    width: 220px;
+    height: 220px;
+    border-radius: 8px 8px 0px 0px;
+    border-bottom: 2px solid var(--shadow-light);
+}
+
+.friendListCardContent{
+    padding: 10px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: var(--foreground);
+}
+
+.friendListCardName{
+    color: var(--text);
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.friendListCardName:hover{
+    text-decoration: underline;
+}
+
+.friendListCardDetail{
+    color: var(--shadow-medium);
+}

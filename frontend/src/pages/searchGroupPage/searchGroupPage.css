@@ -1,0 +1,4 @@
+.searchGroupPage{
+    display: flex;
+    flex-direction: column;
+}

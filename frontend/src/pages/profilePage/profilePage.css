@@ -1,0 +1,27 @@
+.profilePageContent{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    place-items: center;
+}
+
+.profilePagePotentialFriend,
+.profilePageFriendList{
+    background-color: var(--foreground);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px var(--shadow-light);
+    width: 1000px;
+}
+
+.profilePagePostCardDone{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--shadow-medium);
+}
+
+.profilePagePostCardNone{
+    font-size: 20px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    color: var(--shadow-medium);
+}

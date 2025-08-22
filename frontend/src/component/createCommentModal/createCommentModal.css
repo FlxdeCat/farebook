@@ -1,0 +1,186 @@
+.createCommentModalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--shadow-medium);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.createCommentModalContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--foreground);
+    padding: 20px;
+    border-radius: 8px;
+    height: 600px;
+    width: 600px;
+}
+
+.createCommentContentOverflow{
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+}
+
+.createCommentModalCreate{
+    border-top: 2px solid var(--shadow-light-active);
+    padding-top: 10px;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.createCommentModalHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    place-items: center;
+    padding: 0px 5px 15px 5px;
+    border-bottom: 2px solid var(--shadow-light-active);
+}
+
+.createCommentModalTxt {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.createCommentModalCloseBtn{
+    padding: 5px 5px 1px 5px;
+    border-radius: 100px;
+    background-color: var(--shadow-light);
+    cursor: pointer;
+}
+
+.createCommentModalCloseBtn:hover{
+    background-color: var(--shadow-light-active);
+}
+
+.createCommentTopLeft{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    place-items: center;
+    margin-bottom: 5px;
+}
+
+.createCommentTopProfilePicture{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    border: 2px solid var(--shadow-medium);
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.createCommentTopDetail{
+    display: flex;
+    flex-direction: column;
+}
+
+.createCommentTopUserDetail{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.createCommentTopUserDetailName,
+.createCommentTopUserDetailTag{
+    color: var(--text);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.createCommentTopUserDetailName:hover,
+.createCommentTopUserDetailTag:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.createCommentTopDetailTime{
+    font-size: 14px;
+    color: var(--shadow-medium);
+}
+
+.createCommentContent{
+    padding: 0px 3px;
+    font-size: 20px;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.createCommentContent p {
+    margin: 0px;
+}
+
+.createCommentContent a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.createCommentContent a:hover {
+    text-decoration: underline;
+}
+
+.createCommentComments{
+    border-top: 2px solid var(--shadow-light-active);
+    margin-top: 8px;
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.createCommentModalInputText {
+    width: 505px;
+    min-height: 40px;
+    max-height: 100px;
+    overflow: auto;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px 10px 20px;
+    color: var(--text);
+    background-color: var(--shadow-light);
+}
+
+.createCommentModalInputText .public-DraftEditorPlaceholder-root {
+    color: var(--shadow-medium);
+}
+
+.createCommentProfilePicture{
+    width: 33px;
+    height: 33px;
+    border-radius: 100px;
+    border: 2px solid var(--shadow-medium);
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.createCommentModalCreateBtn{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    bottom: 5px;
+    right: 6.5px;
+    cursor: pointer;
+    color: black;
+}
+
+.createCommentModalCreateBtn:disabled{
+    color: var(--shadow-light-active);
+}
+
+.createCommentModalCreateBtn:enabled:hover{
+    color: var(--blue);
+}

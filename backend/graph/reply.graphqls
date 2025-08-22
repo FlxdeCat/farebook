@@ -1,0 +1,24 @@
+type Reply {
+    id: ID!
+    comment: Comment! @goField(forceResolver: true)
+    commentID: ID!
+    replier: User! @goField(forceResolver: true)
+    replierID: ID!
+    content: String!
+    createdAt: Time!
+}
+
+input NewReply {
+    userJWT: String!
+    commentID: String!
+    content: String!
+}
+
+extend type Query {
+    getCommentReply(commentID: String!): [Reply!]!
+    getCommentReplies(commentID: String!): Int!
+}
+
+extend type Mutation {
+    createReply(newReply: NewReply!): Reply!
+}

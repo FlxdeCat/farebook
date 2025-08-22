@@ -1,0 +1,48 @@
+directive @goField(
+	forceResolver: Boolean
+	name: String
+  omittable: Boolean
+) on INPUT_FIELD_DEFINITION | FIELD_DEFINITION
+
+enum FriendStatus{
+  Close
+  Normal
+  Request
+  None
+}
+
+type Friend {
+  userID: ID!
+  user: User! @goField(forceResolver: true)
+  friendID: ID!
+  friend: User! @goField(forceResolver: true)
+  status: FriendStatus!
+}
+
+input NewFriend {
+  userJWT: String!
+  friendID: String!
+  status: FriendStatus!
+}
+
+extend type Query{
+  getUserFriends(userID: String!): [Friend!]!
+  getUserFriendsOnJWT(userJWT: String!): [Friend!]!
+  getAllUserFriends: [Friend!]!
+  getUserFriendRequests(jwt: String!): [Friend!]!
+  getFriendStatus(userJWT: String!, friendID: String!): String!
+  getPotentialFriend(userID: String!): [User!]!
+  getFriendCount(userID: String!): Int!
+  getMutualCount(userJWT: String!, friendID: String!): Int!
+  getUserFriendNotGroupMember(userJWT: String!, groupID: String!): [Friend!]!
+  
+  getAllFriendData: [Friend!]!
+}
+
+extend type Mutation {
+  requestFriend(friend: NewFriend!): Friend!
+  acceptFriend(friend: NewFriend!): Friend!
+  updateFriend(friend: NewFriend!): Friend!
+  rejectFriendRequest(friend: NewFriend!): Friend!
+  removeFriend(friend: NewFriend!): Friend!
+}

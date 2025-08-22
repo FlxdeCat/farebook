@@ -1,0 +1,21 @@
+type CommentLike {
+    commentID: ID!
+    comment: Comment! @goField(forceResolver: true)
+    userID: ID!
+    user: User! @goField(forceResolver: true)
+}
+
+input NewCommentLike {
+    commentID: String!
+    userJWT: String!
+}
+
+extend type Query {
+    getUserLikeComment(newCommentLike: NewCommentLike!): Boolean!
+    getCommentLikes(commentID: String!): Int!
+}
+
+extend type Mutation {
+    likeComment(newCommentLike: NewCommentLike!): CommentLike!
+    unlikeComment(newCommentLike: NewCommentLike!): Boolean!
+}
